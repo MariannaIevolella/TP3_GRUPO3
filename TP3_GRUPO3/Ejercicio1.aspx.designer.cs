@@ -69,15 +69,6 @@ namespace TP3_GRUPO3
         protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
 
         /// <summary>
-        /// Control lblMensajeUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajeUsuario;
-
-        /// <summary>
         /// Control btnGuardarLocalidad.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace TP3_GRUPO3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensaje;
+
+        /// <summary>
+        /// Control lblMensajeUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensajeUsuario;
 
         /// <summary>
         /// Control lblUsuarios.
