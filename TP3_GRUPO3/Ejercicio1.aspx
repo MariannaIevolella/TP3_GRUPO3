@@ -80,24 +80,30 @@
             <div>  
                  Nombre Usuario:
                  <asp:TextBox ID="txtNombre" runat="server"  BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" ValidationGroup="Grupo2" CssClass="auto-style4"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe ingresar un usuario." ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un usuario.</asp:RequiredFieldValidator>
             </div>
             <div>
                  Contraseña:
                  <asp:TextBox ID="txtContraseña" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" style="margin-bottom: 0px" TextMode="Password" ValidationGroup="Grupo2" CssClass="auto-style5"></asp:TextBox>
-                <asp:CompareValidator ID="CompareValidator" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtRepetirCont" ErrorMessage="Contraseña incorrecta" ForeColor="Red" ValidationGroup="Grupo2">Contraseña incorrecta</asp:CompareValidator>
+                 <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Debe ingresar una contraseña." ForeColor="Red" ValidationGroup="Grupo2"></asp:RequiredFieldValidator>
             </div>
             <div>
                 Repetir Contraseña:
                 <asp:TextBox ID="txtRepetirCont" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" TextMode="Password" ValidationGroup="Grupo2" CssClass="auto-style6"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvRepetirCont" runat="server" ControlToValidate="txtContraseña" ValidationGroup="Grupo2">Repetir contraseña</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvRepetirCont" runat="server" ControlToValidate="txtRepetirCont" ValidationGroup="Grupo2" ErrorMessage="Debe repetir contraseña." ForeColor="Red">Debe repetir contraseña.</asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtRepetirCont" ErrorMessage="Contraseña incorrecta" ForeColor="Red" ValidationGroup="Grupo2">Contraseña incorrecta</asp:CompareValidator>
             </div>
             <div>
                 Correo Electronico:
                  <asp:TextBox ID="txtCorreo" runat="server"  BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" ValidationGroup="Grupo2" CssClass="auto-style7"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvCorreoElectronico" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar un correo electronico." ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un correo electronico.</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="revCorreoElectronico" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar una direccion de correo valida." ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="Grupo2">Debe ingresar una direccion de correo valida.</asp:RegularExpressionValidator>
             </div>
             <div>
                  CP:
                  <asp:TextBox ID="txtCP" runat="server"  BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" ValidationGroup="Grupo2" CssClass="auto-style8"></asp:TextBox>
+                 <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Debe ingresar un codigo postal." ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un codigo postal.</asp:RequiredFieldValidator>
+                 <asp:RangeValidator ID="rvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="El codigo postal debe tener 4 cifras." ForeColor="Red" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="Grupo2">El codigo postal debe tener 4 cifras.</asp:RangeValidator>
             </div>
             <div>
                 Localidades: <asp:DropDownList ID="ddlLocalidades" runat="server" Font-Bold="False" Font-Size="14pt" Height="25px" Width="196px" style="margin-bottom: 0px" ValidationGroup="Grupo2" CssClass="auto-style9"></asp:DropDownList>
