@@ -240,12 +240,12 @@ namespace TP3_GRUPO3
         protected global::System.Web.UI.WebControls.Button btnGuardarUsuario;
 
         /// <summary>
-        /// Control lblBienvenido.
+        /// Control btnIrnicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBienvenido;
+        protected global::System.Web.UI.WebControls.Button btnIrnicio;
     }
 }
