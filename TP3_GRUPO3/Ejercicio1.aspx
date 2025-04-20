@@ -71,7 +71,7 @@
           </div>
 
             <div class="auto-style11">
-            <asp:Label ID="lblMensaje" runat="server" Font-Bold="True" Font-Size="13pt"></asp:Label>
+            <asp:Label ID="lblMensajeLocalidad" runat="server" Font-Bold="True" Font-Size="13pt"></asp:Label>
                 <br />
                 <asp:Label ID="lblMensajeUsuario" runat="server" BackColor="White" BorderColor="Red" ForeColor="Red" Text="&quot;Todos los campos son obligatorios&quot;" Visible="False"></asp:Label>
                <br />
@@ -102,18 +102,20 @@
             <div>
                  CP:
                  <asp:TextBox ID="txtCP" runat="server"  BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" ValidationGroup="Grupo2" CssClass="auto-style8"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Debe ingresar un codigo postal." ForeColor="Red" ValidationGroup="Grupo3">Debe ingresar un codigo postal.</asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Debe ingresar un codigo postal." ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un codigo postal.</asp:RequiredFieldValidator>
                  <asp:RangeValidator ID="rvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="El codigo postal debe tener 4 cifras." ForeColor="Red" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="Grupo2">El codigo postal debe tener 4 cifras.</asp:RangeValidator>
             </div>
             <div>
-                Localidades: <asp:DropDownList ID="ddlLocalidades" runat="server" Font-Bold="False" Font-Size="14pt" Height="25px" Width="196px" style="margin-bottom: 0px" ValidationGroup="Grupo2" CssClass="auto-style9"></asp:DropDownList>
+                Localidades: <asp:DropDownList ID="ddlLocalidades" runat="server" Font-Bold="False" Font-Size="13pt" Height="25px" Width="212px" style="margin-bottom: 0px" ValidationGroup="Grupo2" CssClass="auto-style9">
+                    <asp:ListItem>--Seleccionar Localidad--</asp:ListItem>
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debe ingresar una localidad"  ForeColor="Red" ValidationGroup="Grupo2" ControlToValidate="ddlLocalidades" InitialValue="--Seleccionar Localidad--"></asp:RequiredFieldValidator>
             </div>
             <div class="auto-style3" id="lblMensajeIngresado">
                 <br />
             <asp:Button ID="btnGuardarUsuario" runat="server" OnClick="btnGuardarUsuario_Click" Text="Guardar Usuario" Width="155px" ValidationGroup="Grupo2" CssClass="auto-style2" />
+                <asp:Label ID="lblMensajeBienvenida" runat="server"></asp:Label>
                 <br />
-                <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <br />
                 <asp:Button ID="btnIrnicio" runat="server" OnClick="Button1_Click" Text="Ir a inicio .aspx" />
                 <br />
