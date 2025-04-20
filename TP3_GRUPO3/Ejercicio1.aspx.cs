@@ -22,22 +22,22 @@ namespace TP3_GRUPO3
 
                 if (localidad.All(char.IsDigit))
                 {
-                    lblMensaje.ForeColor = System.Drawing.Color.Red;
-                    lblMensaje.Text = "El nombre de localidad no puede ser solo números.";
+                    lblMensajeLocalidad.ForeColor = System.Drawing.Color.Red;
+                    lblMensajeLocalidad.Text = "El nombre de localidad no puede ser solo números.";
                     return;
                 }
 
                 ddlLocalidades.Items.Add(localidad); ///se agrega al DropDownList
                 txtLocalidad.Text = ""; /// se limpia el TextBox
-                lblMensaje.ForeColor = System.Drawing.Color.Green;
-                lblMensaje.Text = "Localidad guardada correctamente.";
+                lblMensajeLocalidad.ForeColor = System.Drawing.Color.Green;
+                lblMensajeLocalidad.Text = "Localidad guardada correctamente.";
             }
 
 
         }
         protected void txtLocalidad_TextChanged(object sender, EventArgs e)
         {
-            lblMensaje.Text = "";
+            lblMensajeLocalidad.Text = "";
         }
         protected void cvRepetida_ServerValidate(object source, ServerValidateEventArgs args)
         {
@@ -63,9 +63,12 @@ namespace TP3_GRUPO3
                     !string.IsNullOrWhiteSpace(txtCP.Text) &&
                     ddlLocalidades.SelectedIndex >= 0)
                 {
-                    lblMensaje.Text = "Bienvenido " + txtNombre.Text;
-                    lblMensaje.ForeColor = System.Drawing.Color.Green;
-                }
+                    lblMensajeBienvenida.Text = "Bienvenido " + txtNombre.Text;
+                    lblMensajeBienvenida.ForeColor = System.Drawing.Color.Green;
+                    txtNombre.Text = "";
+                    txtCorreo.Text = "";
+                    txtCP.Text = "";
+            }
                
             }
 

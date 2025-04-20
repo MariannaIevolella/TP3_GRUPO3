@@ -78,13 +78,13 @@ namespace TP3_GRUPO3
         protected global::System.Web.UI.WebControls.Button btnGuardarLocalidad;
 
         /// <summary>
-        /// Control lblMensaje.
+        /// Control lblMensajeLocalidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Label lblMensajeLocalidad;
 
         /// <summary>
         /// Control lblMensajeUsuario.
@@ -231,6 +231,15 @@ namespace TP3_GRUPO3
         protected global::System.Web.UI.WebControls.DropDownList ddlLocalidades;
 
         /// <summary>
+        /// Control RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+        /// <summary>
         /// Control btnGuardarUsuario.
         /// </summary>
         /// <remarks>
@@ -238,6 +247,15 @@ namespace TP3_GRUPO3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarUsuario;
+
+        /// <summary>
+        /// Control lblMensajeBienvenida.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensajeBienvenida;
 
         /// <summary>
         /// Control btnIrnicio.
