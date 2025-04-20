@@ -51,29 +51,28 @@ namespace TP3_GRUPO3
         }
 
 
-        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
-        {
-            // Verificar si pasaron todos los validadores
-            if (Page.IsValid)
+
+            protected void btnGuardarUsuario_Click(object sender, EventArgs e)
             {
-                string nombreUsuario = txtNombre.Text.Trim();
-                string contrasena = txtContraseña.Text.Trim();
-                string repetirContrasena = txtRepetirCont.Text.Trim();
-                string correo = txtCorreo.Text.Trim();
-                string cp = txtCP.Text.Trim();
-                string localidadSeleccionada = ddlLocalidades.SelectedValue;
 
+                if (!string.IsNullOrWhiteSpace(txtNombre.Text) &&
+                    !string.IsNullOrWhiteSpace(txtContraseña.Text) &&
+                    !string.IsNullOrWhiteSpace(txtRepetirCont.Text) &&
+                    txtContraseña.Text == txtRepetirCont.Text &&
+                    !string.IsNullOrWhiteSpace(txtCorreo.Text) &&
+                    !string.IsNullOrWhiteSpace(txtCP.Text) &&
+                    ddlLocalidades.SelectedIndex >= 0)
                 {
-                    lblMensajeUsuario.Text = "Todos los campos son obligatorios.";
-                    lblMensajeUsuario.ForeColor = System.Drawing.Color.Red;
-                    lblMensajeUsuario.Visible = true;
-                    return;
+                    lblMensaje.Text = "Bienvenido " + txtNombre.Text;
+                    lblMensaje.ForeColor = System.Drawing.Color.Green;
                 }
-
-                
-
-
+               
             }
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Inicio.aspx");
         }
     }
-}
+ }

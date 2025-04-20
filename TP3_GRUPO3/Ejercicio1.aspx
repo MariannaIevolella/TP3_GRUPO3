@@ -102,16 +102,22 @@
             <div>
                  CP:
                  <asp:TextBox ID="txtCP" runat="server"  BackColor="White" BorderColor="Black" BorderStyle="Groove" Font-Bold="True" Font-Size="13pt" Height="20px" OnTextChanged="txtLocalidad_TextChanged" Width="200px" ValidationGroup="Grupo2" CssClass="auto-style8"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Debe ingresar un codigo postal." ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un codigo postal.</asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Debe ingresar un codigo postal." ForeColor="Red" ValidationGroup="Grupo3">Debe ingresar un codigo postal.</asp:RequiredFieldValidator>
                  <asp:RangeValidator ID="rvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="El codigo postal debe tener 4 cifras." ForeColor="Red" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="Grupo2">El codigo postal debe tener 4 cifras.</asp:RangeValidator>
             </div>
             <div>
                 Localidades: <asp:DropDownList ID="ddlLocalidades" runat="server" Font-Bold="False" Font-Size="14pt" Height="25px" Width="196px" style="margin-bottom: 0px" ValidationGroup="Grupo2" CssClass="auto-style9"></asp:DropDownList>
             </div>
-            <div class="auto-style3">
+            <div class="auto-style3" id="lblMensajeIngresado">
+                <br />
             <asp:Button ID="btnGuardarUsuario" runat="server" OnClick="btnGuardarUsuario_Click" Text="Guardar Usuario" Width="155px" ValidationGroup="Grupo2" CssClass="auto-style2" />
+                <br />
+                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br />
+                <asp:Button ID="btnIrnicio" runat="server" OnClick="Button1_Click" Text="Ir a inicio .aspx" />
+                <br />
             </div>
-            <asp:Label ID="lblBienvenido" runat="server" Text="Bienvenido"></asp:Label>
         </div>
     </form>
 </body>

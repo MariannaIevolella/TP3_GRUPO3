@@ -13,7 +13,7 @@
         </div>
         <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblInicio" runat="server" Text="Bienvenido a Inicio.aspx"></asp:Label>
+            <asp:Label ID="lblInicio" runat="server" Text="Bienvenido a Inicio.aspx" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
         </p>
     </form>
 </body>
